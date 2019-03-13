@@ -23,7 +23,7 @@
             <a href="crear-entrada.php" class="boton boton-verde">Crear entradas</a>
             <a href="crear-categoria.php" class="boton">Crear categoria</a>
             <a href="mis-datos.php" class="boton boton-naranja">Mis datos</a>
-            <a href="cerrar.php" class="boton boton-rojo">Cerrar sesión</a>
+            <a href="acciones/cerrar.php" class="boton boton-rojo">Cerrar sesión</a>
 
 
         </div>
@@ -40,7 +40,7 @@
             </div>
             <?php endif; ?>
 
-            <form action="login.php" method="POST">
+            <form action="acciones/login.php" method="POST">
                 <label for="email">Email </label>
                 <input type="email" name="email" >
 
@@ -67,7 +67,7 @@
                 </div>
             <?php endif; ?>
 
-            <form action="registro.php" method="POST">
+            <form action="acciones/registro.php" method="POST">
                 <label for="nombre">Nombre </label>
                 <input type="text" name="nombre" >
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'nombre') : ''; ?>

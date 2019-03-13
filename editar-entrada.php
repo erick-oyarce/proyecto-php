@@ -32,7 +32,7 @@
         Edita tu entrada <strong> <?=$entrada_actual['titulo']?> </strong>
     </p>
     <br>
-    <form action="guardar-entrada.php?editar=<?=$entrada_actual['id']?>" method="POST">
+    <form action="acciones/guardar-entrada.php?editar=<?=$entrada_actual['id']?>" method="POST">
         <label for="titulo">Nombre de la entrada: </label>
         <input type="text" name="titulo" value="<?=$entrada_actual['titulo']?>">
         <?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'titulo') : ''; ?>

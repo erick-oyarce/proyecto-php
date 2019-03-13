@@ -20,7 +20,7 @@
         sus entradas.
     </p>
     <br>
-    <form action="guardar-categoria.php" method="POST">
+    <form action="acciones/guardar-categoria.php" method="POST">
         <label for="titulo">Nombre de la categoria: </label>
         <input type="text" name="nombre">
         

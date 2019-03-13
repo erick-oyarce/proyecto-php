@@ -20,7 +20,7 @@
         de nuestro contenido
     </p>
     <br>
-    <form action="guardar-entrada.php" method="POST">
+    <form action="acciones/guardar-entrada.php" method="POST">
         <label for="titulo">Nombre de la entrada: </label>
         <input type="text" name="titulo">
         <?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'titulo') : ''; ?>
