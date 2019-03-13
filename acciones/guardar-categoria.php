@@ -3,7 +3,7 @@
 
 if(isset($_POST)){
      // conexion a la base de datos
-    require_once 'includes/conexion.php';
+    require_once '../includes/conexion.php';
     
     $nombre = isset($_POST['nombre']) ? mysqli_real_escape_string($db, $_POST['nombre']) : false ;
     
@@ -23,10 +23,10 @@ if(isset($_POST)){
         $sql = "INSERT INTO categorias VALUES (null, '$nombre');";
         $guardar = mysqli_query($db, $sql);
         echo "<script language=JavaScript>alert('Guardado con exito');</script>"; 
-        header( "refresh:0.5; url=index.php" );
+        header( "refresh:0.5; url=../index.php" );
     }else{
         echo "<script language=JavaScript>alert('El nombre de la categoría no es válido');</script>"; 
-        header( "refresh:0.5; url=crear-categoria.php" );
+        header( "refresh:0.5; url=../crear-categoria.php" );
     }
     
     

@@ -2,7 +2,7 @@
 
 if(isset($_POST)){
      // conexion a la base de datos
-    require_once 'includes/conexion.php';
+    require_once '../includes/conexion.php';
     
     $titulo = isset($_POST['titulo']) ? mysqli_real_escape_string($db, $_POST['titulo']) : false ;
     $descripcion = isset($_POST['descripcion']) ? mysqli_real_escape_string($db, $_POST['descripcion']) : false ;
@@ -44,14 +44,14 @@ if(isset($_POST)){
         $guardar = mysqli_query($db, $sql);
         
         
-        header("Location: index.php");
+        header("Location: ../index.php");
         
     }else{
         $_SESSION["errores_entrada"] = $errores;
         if(isset($_GET['editar'])){
-            header("Location: editar-entrada.php?id=".$_GET['id']);
+            header("Location: ../editar-entrada.php?id=".$_GET['id']);
         }else{
-            header("Location: crear-entrada.php");
+            header("Location: ../crear-entrada.php");
         }
         
     }
